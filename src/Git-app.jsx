@@ -3,7 +3,7 @@ import { AddCategory } from "./components/AddCategory";
 import { GitGrid } from "./components/GitGrid";
 
 export const GitApp = () => {
-  const [categoria, setCategoria] = useState(["One Punch", "Dragon Ball"]);
+  const [categoria, setCategoria] = useState(["One Punch"]);
   const onAddCategoria = (onNewCategoria) => {
     if (categoria.includes(onNewCategoria)) return;
     setCategoria([onNewCategoria, ...categoria]);
