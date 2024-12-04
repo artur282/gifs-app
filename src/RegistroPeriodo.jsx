@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "bootstrap-icons/font/bootstrap-icons.min.css";
+
 
 const RegistroAcademico = () => {
   const [anoRegistro, setAnoRegistro] = useState("");
   const [modalidad, setModalidad] = useState("");
 
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const periodo = `${anoRegistro}-${modalidad}`;
-    console.log(`Año de Registro: ${periodo}`);
+    const periodo = `${anoRegistro}${modalidad}`;
+    console.log(`periodo: ${periodo}`);
 
     setAnoRegistro("");
     setModalidad("");
@@ -40,7 +40,7 @@ const RegistroAcademico = () => {
         </div>
         <div className="form-group mb-3">
           <label htmlFor="modalidad" className="form-label">
-            Seleccionar Modalidad
+            Seleccionar Numero
           </label>
           <select
             className="form-control form-control-sm"
@@ -50,11 +50,11 @@ const RegistroAcademico = () => {
             required
           >
             <option value="" disabled>
-              Seleccione una modalidad
+              Numero
             </option>
-            <option value="I">I</option>
-            <option value="II">II</option>
-            <option value="III">III</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
           </select>
         </div>
         <button type="submit" className="btn btn-primary">

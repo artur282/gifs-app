@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "bootstrap-icons/font/bootstrap-icons.min.css";
+
 
 const RegistroTipoAutoridad = () => {
   const [autoridadRegistro, setAutoridad] = useState("");
@@ -10,7 +7,7 @@ const RegistroTipoAutoridad = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const Autoridad = autoridadRegistro;
+    const Autoridad = autoridadRegistro.toLowerCase();
     console.log(Autoridad);
     setAutoridad("")
     
