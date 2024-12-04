@@ -61,8 +61,8 @@ const Periodos = () => {
     );
     setPeriodos(nuevosPeriodos);
     // Actualiza los resultados después de eliminar
-      setResultados(nuevosPeriodos);
-      setNumeroBuscado('')
+    setResultados(nuevosPeriodos);
+    setNumeroBuscado("");
   };
 
   const buscarPeriodo = (e) => {
